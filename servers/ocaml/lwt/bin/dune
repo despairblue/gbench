@@ -1,0 +1,8 @@
+(executables
+  (package ocaml-graphql-server)
+  (names Server)
+  (flags (-w -40 -w +26 -g))
+  (public_names Server)
+  (libraries lib lwt.unix)
+  (preprocess (pps lwt_ppx))
+)

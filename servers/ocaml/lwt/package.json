@@ -1,0 +1,28 @@
+{
+  "name": "ocaml-graphql-server",
+  "version": "0.1.0",
+  "description": "Example Reason Esy Project",
+  "license": "MIT",
+  "esy": {
+    "build": "refmterr dune build",
+    "buildsInSource": "_build",
+    "install": [ "esy-installer #{self.name}.install" ],
+    "NOTE": "Optional release Section. Customizes result of `esy release`",
+    "release": { "bin": [ "Server" ] }
+  },
+  "dependencies": {
+    "@esy-ocaml/reason": ">= 3.4.0 < 3.5.0",
+    "@opam/cohttp-lwt-unix": "2.0.0",
+    "@opam/dune": "*",
+    "@opam/graphql-cohttp": "0.12.1",
+    "@opam/graphql-lwt": "0.9.0",
+    "@opam/lwt_ppx": "1.2.2",
+    "ocaml": "~4.6.0",
+    "refmterr": "*"
+  },
+  "devDependencies": {
+    "@opam/merlin": "*",
+    "ocaml": "~4.6.0",
+    "@opam/odoc": "*"
+  }
+}

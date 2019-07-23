@@ -1,0 +1,13 @@
+(rule
+  (targets assets.ml)
+  (deps (source_tree assets))
+  (action (run %{bin:ocaml-crunch} -m plain assets -o assets.ml))
+)
+
+(library
+  (name lib)
+  (flags (-w -40 -w +26 -g))
+  (public_name ocaml-graphql-server)
+  (libraries str graphql-lwt cohttp-lwt-unix)
+  (inline_tests)
+)
